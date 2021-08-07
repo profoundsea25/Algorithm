@@ -1,10 +1,10 @@
-# <2> 부품 찾기, p.197~200, 이진탐색 활용
+# 부품 찾기
 def binary_search(array, target, start, end) :
     while start <= end :
-        mid = (start + end ) // 2
-        if array[mid] == target :
+        mid = (start + end) // 2
+        if mid == target :
             return mid
-        elif array[mid] > target :
+        elif mid < target :
             end = mid - 1
         else :
             start = mid + 1
@@ -18,7 +18,7 @@ m = int(input())
 x = list(map(int, input().split()))
 
 for i in x :
-    result = binary_search(array, i, 0, n - 1)
+    result = binary_search(array, i, 0, n-1)
     if result != None :
         print('yes', end = ' ')
     else :
