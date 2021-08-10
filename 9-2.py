@@ -4,12 +4,16 @@ import sys
 input = sys.stdin.readline
 INF = int(1e9)
 
+# 노드의 개수, 간선의 개수
 n,m = map(int, input().split())
+# 시작 노드 번호를 입력받기
 start = int(input())
+# 각 노드에 연결되어 있는 노드에 대한 정보를 담는 리스트를 만들기
 graph = [[] for i in range(n+1)]
 distance = [INF] * (n+1)
 
 for _ in range(m):
+    # a번 노드에서 b번 노드로 가는 비용이 c
     a, b, c = map(int, input().split())
     graph[a].append((b,c))
 
@@ -39,3 +43,26 @@ for i in range(1,  n+1):
         print("INFINITY")
     else:
         print(distance[i])
+
+# 입력 예시
+# 6 11
+# 1
+# 1 2 2
+# 1 3 5
+# 1 4 1
+# 2 3 3
+# 2 4 2
+# 3 2 3
+# 3 6 5
+# 4 3 3
+# 4 5 1
+# 5 3 1
+# 5 6 2
+
+# 결과
+# 0
+# 2
+# 3
+# 1
+# 2
+# 4
