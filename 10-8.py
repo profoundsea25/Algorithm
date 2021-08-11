@@ -1,4 +1,4 @@
-# 개선된 서로소 집합 알고리즘 소스코드, p.275~276
+# <3> 도시 분할 계획, p.300~302
 # 특정 원소가 속한 집합을 찾기
 def find_parent(parent, x):
     # 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
@@ -23,30 +23,26 @@ parent = [0] * (v + 1) # 부모 테이블 초기화
 for i in range(1, v+1):
     parent[i] = i
 
-# union연산을 각각 수행
-for i in range(e):
-    a, b = map(int, input().split())
-    union_parent(parent, a, b)
+# 모든 간선을 담을 리스트와 최종 비용을 담을 변수
+edges = []
+result = 0
 
-# 각 원소가 속한 집합 출력
-print('각 원소가 속한 집합 : ', end = ' ')
-for i in range(1, v+1):
-    print(find_parent(parent, i), end = ' ')
+# 모든 간선에 대한 정보를 입력받기
+for _ in range(e):
+    a, b, cost = map(int, input().split())
+    # 비용순으로 정렬하기 위해서 튜플의 첫 번째 원소를 비용으로 설정
+    edges.append((cost, a, b))
 
-print()
+# 간선을 비용순으로 정렬
+edges.sort()
 
-# 부모 테이블 내용 출력
-print('부모 테이블: ', end = ' ')
-for i in range(1, v+1):
-    print(parent[i], end = ' ')
+# 간선을 하나씩 확인하며
+for edge in edges:
+    cost, a, b = edge
+    # 사이클이 발생하지 안흔 경우에만 집합에 포함
+    if find_parent(parent, a) != find_parent(parent, b):
+        union_parent(parent, a, b)
+        result += cost
+        lase = cost
 
-# 입력 예시
-# 6 4
-# 1 4
-# 2 3 
-# 2 4
-# 5 6
-
-# 출력 예시
-# 각 원소가 속한 집합 : 1 1 1 1 5 5
-# 부모 테이블 : 1 1 1 1 5 5
+print(result - cost)
