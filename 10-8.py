@@ -43,6 +43,6 @@ for edge in edges:
     if find_parent(parent, a) != find_parent(parent, b):
         union_parent(parent, a, b)
         result += cost
-        lase = cost
+        last = cost
 
-print(result - cost)
+print(result - last)
