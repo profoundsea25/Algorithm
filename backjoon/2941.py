@@ -23,10 +23,9 @@ while i < len(target) :
 print(count)
 
 
-# 개 쉽게 푸는 방법
+# 쉽게 푸는 방법
 s = ['c=','c-','dz=','d-','lj','nj','s=','z=']
 string = input()
-cnt=0
 for x in s:
    string = string.replace(x, '1')
 print(len(string))
