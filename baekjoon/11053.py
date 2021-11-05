@@ -9,5 +9,4 @@ for i in range(n):
         if a[i] > a[j] and dp[i] < dp[j]:
             dp[i] = dp[j]
     dp[i] += 1
-print(dp)
 print(max(dp))
