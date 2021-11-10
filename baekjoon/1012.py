@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-limit_number = 5000
 sys.setrecursionlimit(5000)
 
 t = int(input())
