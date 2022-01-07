@@ -1,0 +1,6 @@
+1. 임포트
+import java.util.*;
+
+2. 입력받기
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
