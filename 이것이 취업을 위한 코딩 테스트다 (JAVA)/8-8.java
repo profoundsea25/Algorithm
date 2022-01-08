@@ -23,7 +23,7 @@ public class Main {
             }
         }
 
-        if (d[m] == 10001) {
+        if (dp[m] == 10001) {
             System.out.println(-1);
         }
         else {
