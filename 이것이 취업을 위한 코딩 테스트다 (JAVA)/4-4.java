@@ -50,7 +50,7 @@ public class Main {
                 nx = x - dx[direction];
                 ny = y - dy[direction];
                 if (arr[nx][ny] == 0) {
-                    x = nx;;
+                    x = nx;
                     y = ny;
                 }
 

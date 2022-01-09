@@ -16,7 +16,7 @@ public class Main {
 
         dp[0] = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = money[1]; j <= m; j++) {
+            for (int j = money[i]; j <= m; j++) {
                 if (dp[j - money[i]] != 10001) {
                     dp[j] = Math.min(dp[j], dp[j - money[i]] + 1);
                 }

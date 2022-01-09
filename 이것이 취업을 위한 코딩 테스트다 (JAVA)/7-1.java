@@ -6,7 +6,7 @@ public class Main {
         // 각 원소를 하나씩 확인 하며,
         for (int i = 0; i < n; i++) {
             System.out.println(arr[i]);
-            // 현재이ㅡ 원소가 찾고자 하는 원소와 동일한 경우
+            // 현재의 원소가 찾고자 하는 원소와 동일한 경우
             if (arr[i].equals(target)) {
                 return i+1; // 현재 위치 반환
             }

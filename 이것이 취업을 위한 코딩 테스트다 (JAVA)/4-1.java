@@ -6,7 +6,7 @@ public class Main {
 
         int n = sc.nextInt();
         sc.nextLine(); // 버퍼 비우기
-        String[] plans = sc.nextLine().split("");
+        String[] plans = sc.nextLine().split(" ");
         int x = 1, y = 1;
 
         // L R U D 에 따른 이동 방향
