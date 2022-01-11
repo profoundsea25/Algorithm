@@ -41,7 +41,6 @@ class Solution {
                 }
                 // 이미 옳지 않다고 판별했다면 0
                 else if (x.contains(str)) {
-                    answer +=0;
                     continue;
                 }
                 // 이미 판별한 것이 아닐 경우, isCorrect를 실행. 옳으면 +1, 아니면 +0

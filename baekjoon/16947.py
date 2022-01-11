@@ -3,7 +3,7 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10**9)
 
 # dfs result 설명
-# -2 : 사이클을 찾았으나 해당 정점은 사잌르에 포함되지 않음
+# -2 : 사이클을 찾았으나 해당 정점은 사이클에 포함되지 않음
 # -1 : 사이클을 찾지 못한 경우
 # 0 이상 : 사이클을 찾았으며 시작 정점의 번호가 저장됨.
 def dfs(here, start): # (현재 위치, 시작 위치), 사이클 구하기
