@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10000)
 
 # dfs result 설명
 # -2 : 사이클을 찾았으나 해당 정점은 사이클에 포함되지 않음
