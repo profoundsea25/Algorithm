@@ -1,6 +1,6 @@
 # https://www.acmicpc.net/problem/14500
 # 테트로미노
-# 2022.01.16 01:48 ~ 2:48
+# 2022.01.16 01:48 ~ 02:48
 
 n, m = map(int, input().split())
 nums = []
