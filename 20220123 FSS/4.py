@@ -1,3 +1,17 @@
+# 가장 쉬운 방법
+# def solution(truck, w) :
+#     answer = []
+#     for weight in w :
+#         for i in range(len(truck)) :
+#             if weight <= truck[i] :
+#                 answer.append(i+1)
+#                 truck[i] -= weight
+#                 break
+#         else :
+#             answer.append(-1)
+#     return answer
+
+# 제출한 답안
 def is_exist(i, seq_list) :
     for n in range(len(seq_list)-1, -1, -1) :
         if seq_list[n][0] <= i :

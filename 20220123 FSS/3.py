@@ -16,7 +16,7 @@ def solution(x, y, r, d, target):
         target_r, target_cos = calc_cos(x, y, target_loc)
         # 파이썬의 cos함수는 라디안을 받아야 하므로, d * math.pi / 180을 사용하고,
         # 오차를 처리해주기 위해 소숫점 7번째자리 수에서 반올림
-        if target_r <= r and math.cos((d * math.pi) / 180) <= round(target_cos, 7) :
+        if target_r <= r and math.cos((d * math.pi) / 180) <= round(target_cos, 6) :
             answer += 1
     return answer
 

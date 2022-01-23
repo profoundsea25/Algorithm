@@ -8,7 +8,7 @@ def solution(b):
     while a <= b :
         # c**2 = a**2 + b**2 
         c_sq = a**2 + b**2
-        # 만약 c**2의 루트값의 내림한 수를 다시 제곱을 취했을 때, 이전 값과 같다면 그 때의 c를 return
+        # 만약 c_sq의 루트값을 내림한 수를 다시 제곱을 취했을 때, 이전 값과 같다면 그 때의 c를 return
         c = math.floor(c_sq**(1/2))
         if c**2 == c_sq :
             return c
