@@ -13,10 +13,10 @@ while n != 0 :
     plist = prime_list(2*n)
     plist = plist[n+1:]
     print(plist.count(False))
-    n = int(input())
-
 
 # 코드 개선
+n = int(input())
+
 def prime_list(n):
     plist = [False] * (n+1)
     plist[1] = True
